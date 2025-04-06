@@ -7,3 +7,9 @@
 .scroll-hidden::-webkit-scrollbar {
   display: none; /* Chrome, Safari e Opera */
 }
+
+body {
+  margin: 0;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
