@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Home, Map, Lock, Star, CloudRainIcon } from "lucide-react";
-
 import AtualizarPrevisoes from "./AtualizarPrevisoes";
 import { motion } from "framer-motion";
 import { WeatherCarousel } from "./WeatherCarousel";
@@ -28,7 +27,6 @@ export default function WeatherDashboard() {
       await fetch("https://whitenights.onrender.com/weatherSave", {
         method: "POST",
       });
-      console.log("Dados atualizados com sucesso");
     } catch (erro) {
       console.error("Erro ao atualizar previsões:", erro);
     }
