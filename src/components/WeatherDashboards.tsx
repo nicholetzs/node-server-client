@@ -346,12 +346,12 @@ export default function WeatherDashboard() {
                 loading={loading}
               />
 
-              <button
+              {/*<button
                 className="text-sm text-blue-200/50 hover:text-blue-300 transition-colors"
                 onClick={atualizarPrevisoes}
               >
                 Chama API (Não autorizado)
-              </button>
+              </button>*/}
             </div>
           </div>
 
