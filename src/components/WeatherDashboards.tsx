@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Search, User, Home, Map, Lock, Star } from "lucide-react";
 import WeatherCard from "./WeatherCard";
 import TemperatureChart from "./TemperatureChart";
