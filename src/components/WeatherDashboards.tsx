@@ -149,6 +149,7 @@ export default function WeatherDashboard() {
 
       <div className="w-full max-w-6xl bg-indigo-950/30 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row border border-indigo-800/30">
         {/* Sidebar - Estilo Cósmico */}
+
         <div className="w-full md:w-64 bg-indigo-950/40 backdrop-blur-md p-6 flex flex-col border-r border-indigo-800/30">
           <h2 className="text-xl font-bold bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent mb-10 flex items-center gap-2">
             <Star className="h-5 w-5 text-blue-300" />
@@ -192,31 +193,6 @@ export default function WeatherDashboard() {
               <span>Maps</span>
             </button>
           </nav>
-
-          {/* Upgrade Card - Estilo Cósmico */}
-          <div className="mt-auto pt-6">
-            <div className="bg-gradient-to-br from-blue-900/30 to-purple-800/30 backdrop-blur-md rounded-xl p-4 relative overflow-hidden border border-blue-700/30">
-              {/* Efeito de Nebulosa */}
-              <div className="absolute -right-10 -top-10 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl"></div>
-              <div className="absolute -left-5 -bottom-5 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl"></div>
-
-              <div className="absolute top-4 right-4">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
-                    <Lock className="text-white" size={18} />
-                  </div>
-                  <Star
-                    className="text-yellow-300 absolute -top-1 -right-1 animate-pulse"
-                    size={14}
-                  />
-                  <Star
-                    className="text-yellow-300 absolute top-2 -right-3 animate-pulse-slow"
-                    size={10}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
 
           <div className="mt-6 pt-4 border-t border-indigo-800/30">
             <div className="text-xs text-blue-200/70 mb-2">
