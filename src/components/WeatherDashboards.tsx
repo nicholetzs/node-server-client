@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Home, Map, Lock, Star, CloudRainIcon } from "lucide-react";
 import AtualizarPrevisoes from "./AtualizarPrevisoes";
 import { motion } from "framer-motion";
@@ -21,6 +21,8 @@ export default function WeatherDashboard() {
   const [activeTab, setActiveTab] = useState("daily");
   const [previsoes, setPrevisoes] = useState<Previsao[]>([]);
   const [loading, setLoading] = useState(false);
+
+  const [horaAtual, setHoraAtual] = useState(new Date());
 
   /* const atualizarPrevisoes = async () => {
     try {
@@ -111,6 +113,14 @@ export default function WeatherDashboard() {
       dataP.getFullYear() === hoje.getFullYear()
     );
   });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHoraAtual(new Date());
+    }, 1000); // atualiza a cada 1 segundo
+
+    return () => clearInterval(interval); // limpa ao desmontar
+  }, []);
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-indigo-950 via-purple-900 to-fuchsia-900 p-4 md:p-8 flex items-center justify-center">
@@ -213,7 +223,12 @@ export default function WeatherDashboard() {
               Observatório Temporal
             </div>
             <div className="font-mono text-sm text-blue-300">
-              {new Date().toLocaleTimeString()}
+              {horaAtual.toLocaleString("pt-BR", {
+                timeZone: "America/Sao_Paulo",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+              })}
             </div>
           </div>
         </div>
