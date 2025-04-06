@@ -1,5 +1,3 @@
-"use client";
-
 import { RotateCcw, Sparkles } from "lucide-react";
 
 interface AtualizarPrevisoesProps {
