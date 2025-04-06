@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Home, Map, Lock, Star, CloudRainIcon } from "lucide-react";
+import { Home, Map, Star, CloudRainIcon } from "lucide-react";
 import AtualizarPrevisoes from "./AtualizarPrevisoes";
 import { motion } from "framer-motion";
 import { WeatherCarousel } from "./WeatherCarousel";
