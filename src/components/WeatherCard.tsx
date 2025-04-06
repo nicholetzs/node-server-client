@@ -1,4 +1,3 @@
-import React from "react";
 import { Droplets, Wind, MapPin } from "lucide-react";
 
 interface WeatherCardProps {
