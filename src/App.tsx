@@ -1,10 +1,9 @@
-import React from "react";
 import "./App.css";
 import WeatherDashboard from "./components/WeatherDashboards";
 
 function App() {
   return (
-    <div className="">
+    <div className="safe-area-container">
       <WeatherDashboard />
     </div>
   );
