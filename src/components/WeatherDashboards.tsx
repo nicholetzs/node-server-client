@@ -205,17 +205,6 @@ export default function WeatherDashboard() {
                   />
                 </div>
               </div>
-              <div className="pt-14 pb-2 relative z-10">
-                <p className="text-sm font-medium text-blue-200">
-                  Upgrade to{" "}
-                  <span className="font-bold text-blue-100">PRO</span> for more
-                  features
-                </p>
-
-                <button className="mt-3 w-full bg-gradient-to-r from-blue-600/80 to-purple-600/80 hover:from-blue-600 hover:to-purple-600 text-white py-2 rounded-lg transition-all duration-300 shadow-lg">
-                  Upgrade
-                </button>
-              </div>
             </div>
           </div>
 
