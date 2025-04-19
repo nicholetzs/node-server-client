@@ -327,7 +327,9 @@ export default function WeatherDashboard() {
               />
             </div>
             <div>
-              <button onClick={atualizarPrevisoes}>Salvar previsões</button>
+              <button onClick={atualizarPrevisoes}>
+                Salvar previsões(atualiza banco de dados)
+              </button>
             </div>
           </div>
 
