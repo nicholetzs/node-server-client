@@ -3,6 +3,7 @@ import { Home, Map, Star, CloudRainIcon } from "lucide-react";
 import AtualizarPrevisoes from "./AtualizarPrevisoes";
 import { motion } from "framer-motion";
 import { WeatherCarousel } from "./WeatherCarousel";
+import dotenv from "dotenv";
 
 interface Previsao {
   timestamp: string;
@@ -16,11 +17,13 @@ interface Previsao {
   location: string;
   weather_icon?: string;
 }
+dotenv.config();
 
 export default function WeatherDashboard() {
   const [activeTab, setActiveTab] = useState("daily");
   const [previsoes, setPrevisoes] = useState<Previsao[]>([]);
   const [loading, setLoading] = useState(false);
+  const token = process.env.REACT_APP_SECRET_TOKEN;
 
   const [horaAtual, setHoraAtual] = useState(new Date());
 
@@ -28,6 +31,9 @@ export default function WeatherDashboard() {
     try {
       await fetch("https://whitenights.onrender.com/weatherSave", {
         method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
     } catch (erro) {
       console.error("Erro ao atualizar previsões:", erro);
