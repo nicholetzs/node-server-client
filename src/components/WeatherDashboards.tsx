@@ -24,7 +24,7 @@ export default function WeatherDashboard() {
 
   const [horaAtual, setHoraAtual] = useState(new Date());
 
-  /* const atualizarPrevisoes = async () => {
+  const atualizarPrevisoes = async () => {
     try {
       await fetch("https://whitenights.onrender.com/weatherSave", {
         method: "POST",
@@ -32,7 +32,7 @@ export default function WeatherDashboard() {
     } catch (erro) {
       console.error("Erro ao atualizar previsões:", erro);
     }
-  };*/
+  };
 
   const buscarPrevisoes = async () => {
     setLoading(true);
@@ -325,6 +325,9 @@ export default function WeatherDashboard() {
                 onAtualizar={buscarPrevisoes}
                 loading={loading}
               />
+            </div>
+            <div>
+              <button onClick={atualizarPrevisoes}>Salvar previsões</button>
             </div>
           </div>
 
