@@ -24,9 +24,10 @@ export default function WeatherDashboard() {
 
   const [horaAtual, setHoraAtual] = useState(new Date());
 
+  //O fetch nessa rota salva os dados no banco de dados.
   /* const atualizarPrevisoes = async () => {
     try {
-      await fetch("https://whitenights.onrender.com/weatherSave", {
+      await fetch("", {
         method: "POST",
       });
     } catch (erro) {
