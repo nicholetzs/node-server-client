@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Home, Map, Star, CloudRainIcon } from "lucide-react";
-import AtualizarPrevisoes from "./AtualizarPrevisoes";
 import { motion } from "framer-motion";
 import { WeatherCarousel } from "./WeatherCarousel";
+import BuscarPrevisoes from "./BuscarPrevisoes";
 
 interface Previsao {
   timestamp: string;
@@ -322,7 +322,7 @@ export default function WeatherDashboard() {
             <h3 className="text-xl font-medium text-blue-200">Diário</h3>
 
             <div className="flex items-center gap-4">
-              <AtualizarPrevisoes
+              <BuscarPrevisoes
                 onAtualizar={buscarPrevisoes}
                 loading={loading}
               />

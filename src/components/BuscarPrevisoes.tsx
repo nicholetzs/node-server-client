@@ -1,14 +1,14 @@
 import { RotateCcw, Sparkles } from "lucide-react";
 
-interface AtualizarPrevisoesProps {
+interface buscarPrevisoesProps {
   onAtualizar: () => void;
   loading?: boolean;
 }
 
-export default function AtualizarPrevisoes({
+export default function buscarPrevisoes({
   onAtualizar,
   loading = false,
-}: AtualizarPrevisoesProps) {
+}: buscarPrevisoesProps) {
   return (
     <button
       onClick={onAtualizar}
