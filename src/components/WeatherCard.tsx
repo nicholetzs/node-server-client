@@ -30,12 +30,6 @@ export default function WeatherCard({
   wind_speed,
   rain,
 }: WeatherCardProps) {
-  const hasExpandedSection =
-    location ||
-    humidity !== undefined ||
-    wind_speed !== undefined ||
-    rain !== undefined;
-
   return (
     <div className="group relative cursor-pointer transition-transform duration-500 hover:scale-[1.02]">
       <div className="relative bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 transition-all duration-500 hover:bg-white/15 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10">
