@@ -51,7 +51,7 @@ export const WeatherCarousel: React.FC<WeatherCarouselProps> = ({
       {/* Área de rolagem horizontal */}
       <div
         ref={carouselRef}
-        className="flex overflow-x-auto gap-4 px-8 scroll-smooth scroll-hidden overflow-y-hidden scrollbar-hide overflow-x-hidden"
+        className="flex p-5 overflow-x-auto gap-4 px-8 scroll-smooth scroll-hidden overflow-y-hidden scrollbar-hide overflow-x-hidden"
       >
         {previsoes.map((dia, index) => (
           <div key={index} className="flex-shrink-0 w-64">
