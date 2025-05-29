@@ -1,5 +1,3 @@
-"use client";
-
 import { Home, Map, Star } from "lucide-react";
 
 interface SidebarProps {
